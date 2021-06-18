@@ -1,0 +1,49 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>EMG</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="/w3images/lights.jpg">
+              <img src="{%static '' %}{{date1}} " alt="Lights" style="width:100%">
+              <div class="caption">
+                <p>{{date1}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="/w3images/nature.jpg">
+              <img src="" alt="Nature" style="width:100%">
+              <div class="caption">
+                <p>Lorem ipsum...</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="/w3images/fjords.jpg">
+                {% load static %}
+              <img src="{{date3}}" alt="Fjords" style="width:100%">
+              <div class="caption">
+                <p>Lorem ipsum...</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
