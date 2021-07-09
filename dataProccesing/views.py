@@ -81,6 +81,7 @@ class DataView(APIView):
         sns.heatmap(emg_df.corr())
         plt.savefig("./static/img/heatmap_{0}.png".format(date))
         firebase_admin.delete_app(fire)
+        plt.close('all')
 
     def get(self, request,  *args, **kwargs):
 
