@@ -16,7 +16,7 @@ class DataView(APIView):
 
     def cleanData(self, date):
         cred = credentials.Certificate('./cred.json')
-        firebase_admin.initialize_app(cred, {
+        fire = firebase_admin.initialize_app(cred, {
             'databaseURL': 'https://testemg-wheeler-default-rtdb.firebaseio.com/'
         })
         ref = db.reference('GyroSensor/EMG')
@@ -80,6 +80,7 @@ class DataView(APIView):
         # plt.imshow(emg_df.corr(), cmap=plt.cm.Reds, interpolation='nearest')
         sns.heatmap(emg_df.corr())
         plt.savefig("./static/img/heatmap_{0}.png".format(date))
+        firebase_admin.delete_app(fire)
 
     def get(self, request,  *args, **kwargs):
 
